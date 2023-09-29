@@ -371,7 +371,7 @@ return this.initialize();
 return;
 }
 // if we are logged out, print the current qr code
-await page.evaluate(() => {
+await page.evaluate(async({loginQr, loginPhone}) => {
 const conn = window.Store.Conn.serialize();
 const { linkingMethod } = this.options;
 
@@ -381,7 +381,7 @@ await loginQr(conn.ref)
 await loginPhone()
 }
 //window.onQRChanged(conn.ref);
-});
+}, { loginQr, loginPhone });
 }
 // Register other events
 await page.exposeFunction('onAddMessageEvent', msg => {
