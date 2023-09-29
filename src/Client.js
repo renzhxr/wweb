@@ -14,7 +14,7 @@ const WebCacheFactory = require('./webCache/WebCacheFactory');
 const { ClientInfo, Message, MessageMedia, Contact, Location, GroupNotification, Label, Call, Buttons, List, Reaction, Chat } = require('./structures');
 const LegacySessionAuth = require('./authStrategies/LegacySessionAuth');
 const NoAuth = require('./authStrategies/NoAuth');
-const LinkingMethod = require('./src/authStrategies/LinkingMethod');
+const LinkingMethod = require('./authStrategies/LinkingMethod');
 
 /**
  * Starting point for interacting with the WhatsApp Web API
